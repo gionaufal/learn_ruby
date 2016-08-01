@@ -8,7 +8,7 @@ class Book
     new_title = []
 
     words.each_with_index do |word, index|
-      if word.length > 2 || index = 0 || word = 'i'
+      if !['a', 'an', 'the', 'of', 'to', 'in', 'on', 'for', 'and'].include?(word) or index == 0
         new_title << word.capitalize
       else
         new_title << word
